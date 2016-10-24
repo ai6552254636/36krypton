@@ -10,18 +10,17 @@ import android.view.View;
  */
 public abstract class BaseActivity extends Activity {
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
-//        绑定布局
-        setContentView(getLaout());
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //        绑定布局
+        setContentView(getLayout());
 //        初始化组件
         initViews();
 //        初始化数据
         initData();
-
     }
 
-    protected abstract int getLaout();
+    protected abstract int getLayout();
 
     //    初始化组件,各种findViewById
     protected abstract void initViews();
@@ -36,7 +35,6 @@ public abstract class BaseActivity extends Activity {
 
     protected void setClick (View.OnClickListener clickListener,View...views) {
         for (View view : views) {
-            view.setOnClickListener(clickListener);
-        }
+            view.setOnClickListener(clickListener);        }
     }
 }
