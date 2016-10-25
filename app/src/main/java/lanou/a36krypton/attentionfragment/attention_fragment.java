@@ -9,12 +9,24 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import lanou.a36krypton.R;
+import lanou.a36krypton.base.BaseFragment;
 
-public class attention_fragment extends Fragment {
-
-    @Nullable
+public class Attention_fragment extends BaseFragment {
+//  加载布局
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.attention_fragment,null);
+    protected int getLayout() {
+        return R.layout.attention_fragment;
     }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+
 }

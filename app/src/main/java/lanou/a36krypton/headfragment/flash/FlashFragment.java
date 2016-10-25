@@ -8,15 +8,30 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import lanou.a36krypton.R;
+import lanou.a36krypton.base.BaseFragment;
 
 /**
  * Created by dllo on 16/10/24.
  */
-public class FlashFragment extends Fragment{
+public class FlashFragment extends BaseFragment{
 
-    @Nullable
+//   加载布局
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.flash_fragment,null);
+    protected int getLayout() {
+    return R.layout.flash_fragment;
+}
+
+//    初始化数据
+    @Override
+    protected void initData() {
+
     }
+    //    初始化控件
+    @Override
+    protected void initView() {
+
+    }
+
+
+
 }
