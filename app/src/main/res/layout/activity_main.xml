@@ -9,26 +9,12 @@
 
 
     <LinearLayout
+        android:id="@+id/main_headlayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
         android:layout_weight="8"
         >
-    <android.support.design.widget.TabLayout
-        android:id="@+id/main_tb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:tabGravity="center"
-        app:tabMode="fixed"
-        >
-    </android.support.design.widget.TabLayout>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/main_vp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-    </android.support.v4.view.ViewPager>
 
     </LinearLayout>
 
@@ -41,6 +27,7 @@
         >
 
         <RadioGroup
+            android:id="@+id/main_btngroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -59,6 +46,7 @@
             android:checked="false" />
 
             <RadioButton
+                android:id="@+id/main_btnattention"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -69,6 +57,7 @@
                 android:textColor="@drawable/text_selector"
                 android:checked="false" />
             <RadioButton
+                android:id="@+id/main_btnfind"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -79,6 +68,7 @@
                 android:textColor="@drawable/text_selector"
                 android:checked="false" />
             <RadioButton
+                android:id="@+id/main_btnmine"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

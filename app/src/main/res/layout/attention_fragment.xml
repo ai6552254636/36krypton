@@ -3,10 +3,62 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         >
-    </FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:text="关注"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/head_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/image_follow"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                />
+
+        <TextView
+            android:id="@+id/head_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/head_iv"
+            android:text="关注感兴趣的标签"
+            android:textAlignment="center"
+            android:textColor="@color/colorGray"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:scrollbars="vertical"
+                android:layout_below="@+id/head_tv"
+                android:text="让这里都是你想看的"
+                android:textColor="@color/colorGray"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>

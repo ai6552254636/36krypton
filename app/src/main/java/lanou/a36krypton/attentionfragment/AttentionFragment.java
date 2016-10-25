@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import lanou.a36krypton.R;
 import lanou.a36krypton.base.BaseFragment;
 
-public class Attention_fragment extends BaseFragment {
+public class AttentionFragment extends BaseFragment {
 //  加载布局
     @Override
     protected int getLayout() {

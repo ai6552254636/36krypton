@@ -1,30 +1,26 @@
 package lanou.a36krypton;
 
 
-import android.graphics.Color;
-import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.RadioButton;
 
-import java.util.ArrayList;
 
-
+import lanou.a36krypton.attentionfragment.AttentionFragment;
 import lanou.a36krypton.base.BaseActivity;
-import lanou.a36krypton.headfragment.HeadTabAdapter;
-import lanou.a36krypton.headfragment.earlystage.EarlyStageFragment;
-import lanou.a36krypton.headfragment.flash.FlashFragment;
-import lanou.a36krypton.headfragment.recommend.RecommendFragment;
+import lanou.a36krypton.findfragment.FindFragment;
+import lanou.a36krypton.headfragment.HeadFragment;
+import lanou.a36krypton.minefragment.MineFragment;
 
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
-    private TabLayout mTb;
-    private ViewPager mVp;
+
     private RadioButton mBtnHead;
+    private RadioButton mBtnAttention;
+    private View mBtnFind;
+    private View mBtnMine;
+
 
     //   加载布局
     @Override
@@ -35,32 +31,48 @@ public class MainActivity extends BaseActivity {
     //    绑定控件
     @Override
     protected void initViews() {
-        mTb = bindView(R.id.main_tb);
-        mVp = bindView(R.id.main_vp);
         mBtnHead = bindView(R.id.main_btnhead);
+        mBtnAttention = bindView(R.id.main_btnattention);
+        mBtnFind = bindView(R.id.main_btnfind);
+        mBtnMine = bindView(R.id.main_btnmine);
+        mBtnHead.setOnClickListener(this);
+        mBtnAttention.setOnClickListener(this);
+        mBtnFind.setOnClickListener(this);
+        mBtnMine.setOnClickListener(this);
+
 
     }
+
+    @Override
+    public void onClick(View view) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        switch (view.getId()) {
+            case R.id.main_btnhead:
+                fragmentTransaction.replace(R.id.main_headlayout,new HeadFragment());
+                break;
+            case R.id.main_btnattention:
+                fragmentTransaction.replace(R.id.main_headlayout,new AttentionFragment());
+                break;
+            case R.id.main_btnfind:
+                fragmentTransaction.replace(R.id.main_headlayout,new FindFragment());
+                    break;
+            case R.id.main_btnmine:
+                fragmentTransaction.replace(R.id.main_headlayout,new MineFragment());
+                break;
+            default:
+                break;
+        }
+        fragmentTransaction.commit();
+    }
+
 
     //    加载数据
     @Override
     protected void initData() {
 
-        ArrayList<Fragment> fragments = new ArrayList<>();
-        fragments.add(new FlashFragment());
-        fragments.add(new RecommendFragment());
-        fragments.add(new EarlyStageFragment());
-
-        HeadTabAdapter adapter = new HeadTabAdapter(getSupportFragmentManager());
-        adapter.setFragments(fragments);
-        mVp.setAdapter(adapter);
-        mTb.setupWithViewPager(mVp);
-
-        mTb.setSelectedTabIndicatorColor(Color.BLACK);//分割线颜色
-        mTb.setTabTextColors(Color.GRAY, Color.BLACK);//选中文字的颜色
-
     }
-}
 
+}
 
 
 
