@@ -43,10 +43,13 @@ public class HeadFragment extends BaseFragment {
         HeadTabAdapter adapter = new HeadTabAdapter(getFragmentManager());
         adapter.setFragments(fragments);
         mVp.setAdapter(adapter);
+//        默认选择tablayout的标签  默认第几个ViewPager
+        mVp.setCurrentItem(1);
         mTb.setupWithViewPager(mVp);
 
         mTb.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorGrey));//分割线颜色
         mTb.setTabTextColors(getResources().getColor(R.color.colorGrey), getResources().getColor(R.color.colorBlack));//选中文字的颜色
+
     }
 
 

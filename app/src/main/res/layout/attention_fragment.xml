@@ -48,6 +48,7 @@
             android:textColor="@color/colorGray"
             />
             <TextView
+                android:id="@+id/textview_btnid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -58,7 +59,21 @@
                 android:textColor="@color/colorGray"
                 />
 
+            <Button
+                android:id="@+id/btn_attention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/bt_follow"
+                android:text="去看看"
+                android:layout_below="@+id/textview_btnid"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorWhite"
+                />
         </RelativeLayout>
+
+
+
+
     </LinearLayout>
 
 </LinearLayout>

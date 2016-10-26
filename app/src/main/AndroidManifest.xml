@@ -15,7 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".attentionfragment.AttentionFragment"></activity>
+        <activity android:name=".attentionfragment.AttentionFragment" />
+        <activity android:name=".activity.AttentionTagActivity" />
+        <activity android:name=".activity.LoginActivity"></activity>
     </application>
 
 </manifest>
