@@ -11,15 +11,18 @@
     tools:context="lanou.a36krypton.activity.LoginActivity">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@mipmap/ic_common_close_black"
         />
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="50dp"
         >
 
         <TextView
@@ -33,6 +36,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:hint="手机号"
+        android:background="@null"
+        android:textCursorDrawable="@drawable/cursor_selector"
+        android:maxLength="13"
+
     />
 
 </LinearLayout>
@@ -42,6 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="10dp"
 
         >
 
@@ -55,7 +63,10 @@
             android:layout_width="0dp"
             android:layout_weight="3"
             android:layout_height="wrap_content"
+            android:background="@null"
             android:hint="手机验证码"
+            android:textCursorDrawable="@drawable/cursor_selector"
+            android:maxLength="6"
             />
         <TextView
             android:layout_width="0dp"
@@ -65,6 +76,109 @@
             />
 
     </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您也可以尝试"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接听语音验证码"
+            android:textColor="@color/colorBlack"
+            />
+    </LinearLayout>
+    </RelativeLayout>
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="快速登录"
+        android:background="@mipmap/bt_follow"
+        android:textColor="@color/colorGray"
+        android:layout_marginTop="50dp"
+        android:paddingBottom="15dp"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/ic_login_wechat"
+            android:gravity="center"
+            android:text="微信登录"
+            />
+
+
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content">
+        </FrameLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/ic_login_kr"
+            android:text="账号密码登录"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录代表您已阅读并同意"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="36氪网络使用协议"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="和"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="隐私条款"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            />
+</LinearLayout>
 
 
 
