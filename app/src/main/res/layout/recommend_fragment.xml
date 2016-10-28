@@ -3,11 +3,11 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="推荐"
-        android:textSize="40sp"
-        />
+   <com.youth.banner.Banner
+       android:id="@+id/recommend_banner"
+       android:layout_width="match_parent"
+       android:layout_height="200dp"
+       >
+   </com.youth.banner.Banner>
 
 </LinearLayout>

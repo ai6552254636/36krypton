@@ -82,5 +82,5 @@ public class VolleySingleton {
         mRequestQueue.add(request);
     }
 
-    
+
 }
