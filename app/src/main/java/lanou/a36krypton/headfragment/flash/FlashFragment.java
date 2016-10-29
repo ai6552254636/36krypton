@@ -1,12 +1,5 @@
 package lanou.a36krypton.headfragment.flash;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import lanou.a36krypton.R;
 import lanou.a36krypton.base.BaseFragment;
 
@@ -18,7 +11,7 @@ public class FlashFragment extends BaseFragment{
 //   加载布局
     @Override
     protected int getLayout() {
-    return R.layout.flash_fragment;
+    return R.layout.fragment_flash;
 }
 
 //    初始化数据

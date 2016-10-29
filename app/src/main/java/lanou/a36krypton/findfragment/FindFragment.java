@@ -10,7 +10,7 @@ public class FindFragment extends BaseFragment{
 
     @Override
     protected int getLayout() {
-        return R.layout.find_fragment;
+        return R.layout.fragment_find;
     }
     @Override
     protected void initData() {

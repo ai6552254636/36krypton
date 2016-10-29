@@ -16,7 +16,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
 
     @Override
     protected int getLayout() {
-        return R.layout.mine_fragment;
+        return R.layout.fragment_mine;
     }
 
     @Override

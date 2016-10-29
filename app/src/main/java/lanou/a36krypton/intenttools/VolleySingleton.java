@@ -22,7 +22,7 @@ public class VolleySingleton {
     private final RequestQueue mRequestQueue;
     private final ImageLoader mImageLoader;
 
-    public VolleySingleton() {
+    private VolleySingleton() {
 //        创建队列 MyApp自定义类继承Application整个工程的上下文
         mRequestQueue = Volley.newRequestQueue(MyApp.getContext());
         mImageLoader = new ImageLoader(mRequestQueue, new MemoryCache());

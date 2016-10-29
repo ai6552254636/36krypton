@@ -1,6 +1,5 @@
 package lanou.a36krypton.headfragment;
 
-import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -24,7 +23,7 @@ public class HeadFragment extends BaseFragment {
 
     @Override
     protected int getLayout() {
-        return R.layout.head_fragment;
+        return R.layout.fragment_head;
     }
 
     @Override

@@ -9,5 +9,11 @@
        android:layout_height="200dp"
        >
    </com.youth.banner.Banner>
+   <ListView
+       android:id="@+id/recommend_listview"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       >
+   </ListView>
 
 </LinearLayout>

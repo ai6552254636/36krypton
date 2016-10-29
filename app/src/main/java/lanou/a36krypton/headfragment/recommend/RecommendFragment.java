@@ -1,12 +1,5 @@
 package lanou.a36krypton.headfragment.recommend;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -32,7 +25,7 @@ public class RecommendFragment extends BaseFragment {
 
 
     protected int getLayout() {
-        return R.layout.recommend_fragment;
+        return R.layout.fragment_recommend;
     }
 
 
