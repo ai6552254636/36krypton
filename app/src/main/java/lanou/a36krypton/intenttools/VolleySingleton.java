@@ -80,6 +80,7 @@ public class VolleySingleton {
 //   将请求添加到请求队列
     public <T> void addRequest(Request<T> request) {
         mRequestQueue.add(request);
+
     }
 
 

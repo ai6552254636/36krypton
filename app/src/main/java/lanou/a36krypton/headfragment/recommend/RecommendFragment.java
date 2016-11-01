@@ -18,8 +18,8 @@ public class RecommendFragment extends BaseFragment {
 
     private Banner mBanner;
     private ArrayList<String> pics = new ArrayList<>();
-    String url1 = "";
-    String url2 = "";
+    String url1 = "http://img4.cache.netease.com/photo/0001/2016-10-31/C4MK6TJM00AP0001.jpg";
+    String url2 ="";
     String url3 = "";
     String url4 = "";
 
@@ -43,7 +43,7 @@ public class RecommendFragment extends BaseFragment {
         mBanner.setImageLoader(new GlidelmageLoader()); //图片加载器
         mBanner.setImages(pics); //设置图片集合
         mBanner.setBannerAnimation(Transformer.DepthPage); //设置动画效果
-        mBanner.setBannerTitles(  Arrays.asList("")  ); //设置标题集合
+        mBanner.setBannerTitles(  Arrays.asList("标题")  ); //设置标题集合
         mBanner.isAutoPlay(true); //设置自动轮播,默认为true
         mBanner.setDelayTime(2000); //设置轮播时间
         mBanner.setIndicatorGravity(BannerConfig.CENTER); //设置轮播指示器位置

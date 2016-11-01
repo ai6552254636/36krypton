@@ -44,7 +44,8 @@ public class EarlyStageFragment extends BaseFragment {
            @Override
            public void onResponse(EarlyStageBean response) {
 //                        请求成功的方法
-               ArrayList<EarlyStageBean.DataBean.DataBean1> mBean1 = (ArrayList<EarlyStageBean.DataBean.DataBean1>) response.getData().getData();
+               ArrayList<EarlyStageBean.DataBean.DataBean1> mBean1 =
+                       (ArrayList<EarlyStageBean.DataBean.DataBean1>) response.getData().getData();
                EarlyStageAdapter adapter = new EarlyStageAdapter(getActivity());
                adapter.setBeanArrayList(mBean1);
                mLV.setAdapter(adapter);
