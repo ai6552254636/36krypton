@@ -1,8 +1,6 @@
 package lanou.a36krypton.startactivity;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.os.AsyncTask;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,14 +9,12 @@ import android.widget.TextView;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import java.lang.ref.ReferenceQueue;
-
 import lanou.a36krypton.MainActivity;
 import lanou.a36krypton.R;
 import lanou.a36krypton.base.BaseActivity;
 import lanou.a36krypton.intenttools.GsonRequest;
 import lanou.a36krypton.intenttools.VolleySingleton;
-import lanou.a36krypton.startactivity.bean.StartBean;
+import lanou.a36krypton.bean.startbean.StartBean;
 
 /**
  * Created by dllo on 16/10/21.
@@ -40,13 +36,12 @@ public class StartActivity extends BaseActivity {
     protected void initViews() {
         mIV = bindView(R.id.start_iv);
         mTV = bindView(R.id.start_tvtime);
-        DataBOX();
+        dataBOX();
         setTimeDesign();
     }
 
-//创建网络请求
-
-    public void DataBOX () {
+//    创建网络请求
+    public void dataBOX () {
         //                        请求成功的方法
         gsonRequest = new GsonRequest<StartBean>(StartBean.class,
                 urlStr, new Response.Listener<StartBean>() {
@@ -59,44 +54,47 @@ public class StartActivity extends BaseActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
             }
-
         });
 
     }
-//定时器CountDownTimer实现倒计时显示和界面跳转
+
+
+//    定时器CountDownTimer实现倒计时显示和界面跳转
     public void setTimeDesign() {
+
         mTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(StartActivity.this, MainActivity.class);
-                startActivity(intent);
-                timer.cancel();
-                finish();   //实现启动页面不在显示
+                jumpIntent();
             }
-
         });
         timer = new CountDownTimer(8000,1000) {
             @Override
             public void onTick(long l) {
                 mTV.setText( (l / 1000) + "");
             }
-
             @Override
             public void onFinish() {
-                Intent intent = new Intent(StartActivity.this,MainActivity.class);
-                startActivity(intent);
-                timer.cancel();
-                finish();
+               jumpIntent();
             }
         };
           timer.start();
     }
 
+
+//    页面自动跳转的Intent;
+    private void jumpIntent () {
+        Intent intent = new Intent(StartActivity.this, MainActivity.class);
+        startActivity(intent);
+        timer.cancel();
+        finish();   //实现启动页面不在显示
+    }
+
+
     @Override
     protected void initData() {
-//请求图片
+//    请求图片
         VolleySingleton.getInsatance().getImage(urlStr,mIV);
 
     }

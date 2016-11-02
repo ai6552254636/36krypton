@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 import lanou.a36krypton.R;
 import lanou.a36krypton.base.BaseFragment;
-import lanou.a36krypton.headfragment.bean.EarlyStageBean;
+import lanou.a36krypton.bean.headfragmentbean.EarlyStageBean;
 import lanou.a36krypton.intenttools.GsonRequest;
 import lanou.a36krypton.intenttools.VolleySingleton;
 
@@ -33,11 +33,11 @@ public class EarlyStageFragment extends BaseFragment {
     @Override
     protected void initView() {
         mLV = bindView(R.id.listview_early);
-        DataBOX();
+        dataBox();
     }
 
 //    创建网络请求
-    public void DataBOX () {
+    public void dataBox () {
         //                        请求成功的方法
         gsonRequest = new GsonRequest<EarlyStageBean>(EarlyStageBean.class,
                url, new Response.Listener<EarlyStageBean>() {
@@ -46,7 +46,7 @@ public class EarlyStageFragment extends BaseFragment {
 //                        请求成功的方法
                ArrayList<EarlyStageBean.DataBean.DataBean1> mBean1 =
                        (ArrayList<EarlyStageBean.DataBean.DataBean1>) response.getData().getData();
-               EarlyStageAdapter adapter = new EarlyStageAdapter(getActivity());
+               EarlyStageAdapter adapter = new EarlyStageAdapter();
                adapter.setBeanArrayList(mBean1);
                mLV.setAdapter(adapter);
            }

@@ -1,8 +1,6 @@
-package lanou.a36krypton.headfragment.earlystage;
+package lanou.a36krypton.headfragment.recommend.recommendlistview;
 
 import android.content.Context;
-
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,23 +13,24 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import lanou.a36krypton.R;
-import lanou.a36krypton.bean.headfragmentbean.EarlyStageBean;
+import lanou.a36krypton.bean.headfragmentbean.RecommendBean;
 import lanou.a36krypton.intenttools.VolleySingleton;
 
 /**
- * Created by dllo on 16/10/29.
+ * Created by dllo on 16/11/1.
  */
-public class EarlyStageAdapter extends BaseAdapter {
+public class RecommendListViewAdapter extends BaseAdapter{
 
-    private ArrayList<EarlyStageBean.DataBean.DataBean1> beanArrayList;
+    ArrayList<RecommendBean.DataBean> beanArrayList ;
 
-    public void setBeanArrayList(ArrayList<EarlyStageBean.DataBean.DataBean1> beanArrayList) {
+    public void setBeanArrayList(ArrayList<RecommendBean.DataBean> beanArrayList) {
         this.beanArrayList = beanArrayList;
+        notifyDataSetChanged();
     }
 
     @Override
     public int getCount() {
-        return beanArrayList == null ? 0 : beanArrayList.size();
+        return beanArrayList == null ? 0 : beanArrayList.size() ;
     }
 
     @Override
@@ -41,45 +40,41 @@ public class EarlyStageAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int i) {
+
         return i;
     }
 
     @Override
     public View getView(int i, View convertView, ViewGroup viewGroup) {
-        ViewHolder viewHolder = null;
+        ViewHolder viewholder = null;
         if (convertView == null) {
-            Context mContext = viewGroup.getContext();
+            Context mContext = viewGroup.getContext();     //有viewGroup  null的参数就要变成viewGroup,后面的布尔要给false
             convertView = LayoutInflater.from(mContext).inflate(R.layout.item_earlystage,viewGroup,false);
-            viewHolder = new ViewHolder(convertView);
-            convertView.setTag(viewHolder);
+            viewholder = new ViewHolder(convertView);
+            convertView.setTag(convertView);
         } else {
-            viewHolder = (ViewHolder) convertView.getTag();
+           viewholder =  (ViewHolder) convertView.getTag();
         }
-
-//        时间戳转换
+//时间戳格式转换
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy - MM - dd HH:mm:ss");
         String finalTime = sdf.format(new Date
                 (  ( beanArrayList.get(i).getPublishTime() )
                 ));
 
-        VolleySingleton.getInsatance().getImage(beanArrayList.get(i).getFeatureImg(),viewHolder.mIV);
-        viewHolder.mTV.setText(beanArrayList.get(i).getTitle());
-        viewHolder.mTV1.setText(beanArrayList.get(i).getColumnName());
-        viewHolder.mTV2.setText(finalTime);
-
-
-//        viewHolder.mTV1.setText(  String.valueOf( beanArrayList.get(i).getPublishTime() ) );
-
+        VolleySingleton.getInsatance().getImage(beanArrayList.get(i).getFeatureImg() ,viewholder.mIV );
+        viewholder.mTV.setText(beanArrayList.get(i).getTitle());
+        viewholder.mTV1.setText(beanArrayList.get(i).getColumnName());
+        viewholder.mTV2.setText(finalTime);
 
         return convertView;
     }
 
     private class ViewHolder {
 
-        private final ImageView mIV;
-        private final TextView mTV;
-        private final TextView mTV1;
-        private final TextView mTV2;
+        private ImageView mIV;
+        private TextView mTV;
+        private TextView mTV1;
+        private TextView mTV2;
 
         public ViewHolder(View convertView) {
             mIV = (ImageView) convertView.findViewById(R.id.item_earlyimageview);

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.squareup.picasso.Picasso;
 import com.youth.banner.loader.ImageLoader;
 
 /**
@@ -23,6 +24,9 @@ public class GlidelmageLoader implements ImageLoader {
          */
 //        需要导Glide包
         Glide.with(context).load(path).into(imageView);
+
+
+//        Picasso.with(context).load(path.toString()).into(imageView);
 
     }
 }

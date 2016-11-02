@@ -1,4 +1,4 @@
-package lanou.a36krypton.startactivity.bean;
+package lanou.a36krypton.bean.startbean;
 
 /**
  * Created by dllo on 16/11/1.

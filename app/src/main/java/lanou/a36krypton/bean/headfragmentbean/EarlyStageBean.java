@@ -1,4 +1,4 @@
-package lanou.a36krypton.headfragment.bean;
+package lanou.a36krypton.bean.headfragmentbean;
 
 import java.util.List;
 
