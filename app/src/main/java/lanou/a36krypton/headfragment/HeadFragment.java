@@ -10,7 +10,7 @@ import lanou.a36krypton.R;
 import lanou.a36krypton.base.BaseFragment;
 import lanou.a36krypton.headfragment.earlystage.EarlyStageFragment;
 import lanou.a36krypton.headfragment.flash.FlashFragment;
-import lanou.a36krypton.headfragment.recommend.RecommendFragment;
+import lanou.a36krypton.headfragment.recommend.recommendlistview.RecommendFragment;
 
 /**
  * Created by dllo on 16/10/25.

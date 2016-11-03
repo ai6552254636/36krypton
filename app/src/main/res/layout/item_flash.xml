@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <lanou.a36krypton.widgetlayout.ExpandTextView
+        android:background="@android:color/white"
+        android:id="@+id/cusTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        app:drawableHeight="12dp"
+        app:drawableWidth="14dp"
+        app:expandDrawable="@mipmap/up"
+        app:maxLines="3"
+        app:shrinkDrawable="@mipmap/down"
+        app:textColor="@android:color/black"
+        app:textSize="14sp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试文字"
+        />
+
+
+</LinearLayout>

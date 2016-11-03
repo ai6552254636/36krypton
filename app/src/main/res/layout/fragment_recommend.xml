@@ -3,12 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-   <com.youth.banner.Banner
-       android:id="@+id/recommend_banner"
-       android:layout_width="match_parent"
-       android:layout_height="200dp"
-       >
-   </com.youth.banner.Banner>
+
    <ListView
        android:id="@+id/recommend_listview"
        android:layout_width="match_parent"

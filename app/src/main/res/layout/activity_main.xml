@@ -8,7 +8,7 @@
     tools:context="lanou.a36krypton.MainActivity">
 
 
-    <LinearLayout
+    <FrameLayout
         android:id="@+id/main_headlayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -16,7 +16,7 @@
         android:layout_weight="8"
         >
 
-    </LinearLayout>
+    </FrameLayout>
 
 
 

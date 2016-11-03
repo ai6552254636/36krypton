@@ -62,6 +62,7 @@ public class FindFragment extends BaseFragment{
 
 
 
+
 //        VideoView 常用的几个方法
 //        public int getDuration ()
 //        获得所播放视频的总时间

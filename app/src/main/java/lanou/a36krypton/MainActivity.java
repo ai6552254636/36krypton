@@ -40,6 +40,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mBtnFind.setOnClickListener(this);
         mBtnMine.setOnClickListener(this);
 
+
 //        默认选择fragment界面
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.main_headlayout,new HeadFragment());
